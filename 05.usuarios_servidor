@@ -1,0 +1,10 @@
+/*Criando usuarios de servidor*/
+
+create user 'roberta_oliveira'@'localhost'
+identified by '123456';
+create user 'hudson_silva'@'localhost'
+identified by '142536';
+create user 'lara.rodrigues'@'localhost'
+identified by '123456';
+create user 'calebe.santos'@'localhost'
+identified by '123456';
