@@ -1,0 +1,36 @@
+/*Criando usuarios de servidor*/
+
+create user 'roberta_oliveira'@'localhost'
+identified by '123456';
+create user 'hudson_silva'@'localhost'
+identified by '142536';
+create user 'lara.rodrigues'@'localhost'
+identified by '123456';
+create user 'calebe.santos'@'localhost'
+identified by '123456';
+
+);
+
+/* Alternando os registros das tabelas */
+
+update `bd_caso_estudo_vendas`.`tb_cli`
+set cli_nome = 'Novo Nome Cliente'
+where cli_cod = 1;
+select * from tb_cli;
+
+/* Deletando registros de banco de dados */
+delete from `bd_caso_estudo_vendas`.`tb_prod`
+where prod_cod = 3;
+
+/*Consultando registro e selecionando colunas */
+select prod_cod, prod_forn_cod, prod_desc, prod_vlr
+from `bd_caso_estudo_vendas`.`tb_prod`
+where prod_cod = 3;
+
+
+/*Consultar todos registros das tabelas*/
+select * from tb_cli
+order by cli_nome asc;
+
+);
+
