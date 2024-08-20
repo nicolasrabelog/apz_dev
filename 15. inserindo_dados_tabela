@@ -1,0 +1,31 @@
+-- INSERINDO DADOS NA TABELA LOCAL 
+INSERT INTO `bd_exercicio`.`tb_local`(local_codigo, local_desc) VALUES (1, 'São Paulo');
+INSERT INTO `bd_exercicio`.`tb_local`(local_codigo, local_desc) VALUES (2, 'Minas Gerais');
+INSERT INTO `bd_exercicio`.`tb_local`(local_codigo, local_desc) VALUES (3, 'Rio de Janeiro');	
+
+-- Inserindo Dados na Tabela DEPARTAMENTO 
+ INSERT INTO `bd_caso_estudo_vendas`.`tb_departamento`(depto_codigo, depto_nome, local_cod)
+  VALUES (1, 'TI', 1);
+
+  INSERT INTO `bd_caso_estudo_vendas`.`tb_departamento`(depto_codigo, depto_nome, local_cod)
+  VALUES (2, 'RH', 2);
+  
+   INSERT INTO `bd_caso_estudo_vendas`.`tb_departamento`(depto_codigo, depto_nome, local_cod)
+  VALUES (3, 'ADM', 3);
+  
+  -- INSERINDO DADOS NA TABELA PROJETO
+  INSERT INTO `bd_exercicio`.`tb_projeto`(proj_codigo, proj_numero, depto_cod, local_cod)
+  VALUES (1, 11, 1, 1);
+  
+  INSERT INTO `bd_exercicio`.`tb_projeto`(proj_codigo, proj_numero, depto_cod, local_cod)
+  VALUES (2, 22, 2, 2);
+  
+  -- Inserindo funcionario que trabalha no depto 1 e projeto 2, este funcionario não diferencia um departamento
+INSERT INTO `bd_exercicio`.`tb_funcionario`(func_codigo, func_nome, func_cpf, forn_end, forn_salario, ger_depto_cod, trab_depto_cod, proj_cod)
+  VALUES (1, 'Jose Silva', '12112312344', 'Endereco', 2000, null, 1, 1,);
+
+-- Inserindo funcionario que trabalha e gerencia o departamento 2, e trabalha tambem no projeto 2
+INSERT INTO `bd_exercicio`.`tb_funcionario`(func_codigo, func_nome, func_cpf, forn_end, forn_salario, ger_depto_cod, trab_depto_cod, proj_cod)
+ VALUES (2, 'Ana Silva', '12345678944', 'Endereco', 2000, 2, 2, 2);
+
+ 
